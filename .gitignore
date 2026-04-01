@@ -1,0 +1,18 @@
+# Локальная папка с провайдерами и модулями
+.terraform/
+
+# Файлы состояния (содержат пароли в открытом виде!)
+*.tfstate
+*.tfstate.*
+
+# Файлы с переменными, где вы будете хранить пароли
+*.tfvars
+*.tfvars.json
+override.tf
+override.tf.json
+_override.tf
+_override.tf.json
+
+# Логи работы Terraform
+.terraform.lock.hcl
+crash.log
