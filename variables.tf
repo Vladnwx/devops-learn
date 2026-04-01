@@ -1,13 +1,17 @@
-# Файл с переменными
+# Файл с описанием переменных
 
-variable "ssh_key" {
-  description = "My SSH public key"
+variable "proxmox_api_url" {
+  description = "URL API Proxmox (например, https://192.168.0.10)"
   type        = string
-  default     = "ssh-rsa ..." # Замените на ваш ключ
 }
 
 variable "password" {
-  description = "my PVE password"
+  description = "Пароль пользователя Proxmox"
   type        = string
-  default     = "ваш_пароль" # Замените на пароль от Proxmox
+  sensitive   = true
+}
+
+variable "ssh_key" {
+  description = "Ваш публичный SSH ключ для доступа в ВМ"
+  type        = string
 }
