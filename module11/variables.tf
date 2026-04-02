@@ -11,7 +11,12 @@ variable "password" {
   sensitive   = true
 }
 
-variable "ssh_key" {
-  description = "Ваш публичный SSH ключ для доступа в ВМ"
-  type        = string
+variable "ssh_keys" {
+  description = "Список публичных SSH ключей"
+  type        = list(string)
+  default = [
+    "sk-ssh-ed25519@openssh.com AAAAGnNrLXNzaC1lZDI1NTE5QG9wZW5zc2guY29tAAAAIIE24p25plydthi5LJH2cA9lMl81mowohsJ9ebXdt9xYAAAABHNzaDo= yubikey-home-servers",
+    "ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIM1EJ8xftvnwyjlbNQIIxvDcKUQTKWPz7K4wwWnLSkyI nas-ansible@nas",
+    "ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIDRk43+wJyIiEZ4924k505vLzb3SfJMmG5rf1FOK5vuk galaxys23"
+  ]
 }

@@ -22,7 +22,7 @@ resource "proxmox_vm_qemu" "gitlab" {
   skip_ipv6  = true
   ciuser     = "vladimir"
   cipassword = "1"
-  sshkeys    = var.ssh_key
+  sshkeys = join("\n", var.ssh_keys)
 
   serial {
     id = 0
