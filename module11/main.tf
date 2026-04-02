@@ -1,7 +1,7 @@
 resource "proxmox_vm_qemu" "gitlab" {
   vmid        = 180
   name        = "gitlab"
-  target_node = "server1"
+  target_node = "pve"
   agent       = 1
   cpu {
     cores = 2
@@ -22,7 +22,7 @@ resource "proxmox_vm_qemu" "gitlab" {
   skip_ipv6  = true
   ciuser     = "vladimir"
   cipassword = "1"
-  sshkeys = join("\n", var.ssh_keys)
+  sshkeys    = join("\n", var.ssh_keys)
 
   serial {
     id = 0
