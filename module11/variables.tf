@@ -1,7 +1,7 @@
 # Файл с описанием переменных
 
 variable "proxmox_api_url" {
-  description = "URL API Proxmox (например, https://192.168.0.10)"
+  description = "URL API Proxmox (например, https://192.168.0.200)"
   type        = string
 }
 
